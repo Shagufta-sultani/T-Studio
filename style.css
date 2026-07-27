@@ -1,0 +1,745 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --text-color:#ff0000be;
+    --backgroung-color:#2022247a;
+    --border-Color: #e3eaf0;
+    --text-sec: #fefefe;
+    --background-colors: #504e4d;
+}
+html{
+    font-size: 62.5%;
+    background-color: var(--border-Color);
+    overflow-x: hidden;
+}
+li{
+    list-style: none;
+}
+.grid{
+    display: grid;
+}
+.grid-three--cols{
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-four--cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-two--cols{
+    grid-template-columns: repeat(2, 1fr);
+}
+a{
+    transition: all 0.3s;
+}
+a,label{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: var(--text-sec);
+}
+.span{
+    color: var(--text-color);
+}
+.para{
+        font-size: 1.4rem;
+    }
+    .paraa{
+        font-size: 1.5rem;
+    }
+.para2{
+    color:var(--text-color);
+    font-size: 1.4rem;
+}    
+    .subH2{
+         padding: 1rem 0;
+     text-transform: uppercase;
+     font-size: 2.8rem;
+    }
+    .com{
+    background: linear-gradient( to bottom right,
+    #e3eaf0, #ff0000be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    } 
+    .nav-link.active{
+        color: var(--text-color);
+    }
+.container{
+    max-width: 142rem;
+    padding: 4rem 7rem;
+    margin: 0 auto;
+}
+:is(
+    .header-sec,.main-con, .content,#about,.about-SEc,.content,.ourClass,.scheduleCont,.trainer, .contact-sec,.footer-sec)
+    .container{
+        padding: 3rem 4rem;
+    }
+.header-sec{
+    width: 100%;
+    background-color:var(--backgroung-color);
+    padding: 2.3rem 12rem;
+    z-index: 999; 
+    position: fixed;
+    gap: 5rem;
+}
+.navbar{
+    min-height:6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo p{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color:var(--text-sec);
+}
+.nav-list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 6rem;
+}
+.btn{
+    background-color: var(--text-color);
+    padding: 1rem 1.1rem;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    transition: all 0.3s ease-in;
+} .btn:hover{
+    transform: translateY(-3px);
+}
+.navbar .hamburger{
+    font-size: 1.5rem;
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
+@media (width <= 900px){
+    .nav-list{
+        display: none;
+    }
+     .navbar .hamburger{
+        display: block;
+    }
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+        position: absolute;
+        top: 30%;
+        left: -100%;
+        transform: translateX(-50%);
+        width: 25rem;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        background-color:transparent ;
+        border: .1rem solid var(--text-color);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+         rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+         transition: all 2s ease-in;
+        }
+        .mobile-menu.active{
+         z-index: 999;
+        left: 70%;
+        transform: translateX(-60%);
+    }
+}
+.main-sec{
+    display:none;
+}
+.main-sec.active{
+        height: 100vh;
+        background: linear-gradient(to bottom right,
+            rgba(85, 82, 81, 0.5),
+            rgba(69, 67, 66, 0.9)),
+        url(./img/kettlebell-fitness-still-life.jpg) center/cover;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        z-index:1;
+        position: relative;
+        margin: 0 auto;
+    }
+    .main-con{
+        transform: translateY(50px);
+        opacity: 0;
+        animation: slideUp 1s forwards 0.5s;
+    }
+    @keyframes slideUp{
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+        h3{
+            color: var(--text-sec);
+            font-size: 1.6rem;
+            text-transform: uppercase;
+           margin-bottom: 1rem;
+        }
+        h1{
+            color: var(--text-sec);
+            font-size: 6.5rem;
+            text-transform: uppercase;
+            margin-bottom:1.4rem;
+        }
+        .btn1{
+            padding: 1.1rem 1.3rem;
+            letter-spacing: 0.1rem;
+            background-color: var(--text-color);
+            color: var(--text-sec);
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+             transition: all 0.2s ease-in;
+        }
+        .btn1:hover{
+            background: transparent;
+            border: 1px solid var(--text-color);
+        }    
+/* About section */
+#about{
+    padding-top: 10rem !important;
+}
+.about-sec{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3rem;
+}
+.about-content{
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+.cols-1{
+    width: 100%;
+}
+.cols-2{
+    width: 100%;
+}
+.PART1{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+}
+.icons{
+    width: 25%;
+    height: 70px;
+    background-color: var(--text-color);
+    span{
+        .fa-solid{
+        padding:2.2rem 0 0 1.3rem;
+        color: var(--border-Color);
+        font-size: 2.5rem;
+        transform: rotate(-13deg);
+      }
+    }
+}
+.muscle-con{
+    h3{
+        margin-bottom: 0.4rem;
+        color: #000000cb;
+        text-transform: capitalize;
+        font-size: 1.65rem;
+    }
+}
+.about-hero{
+    background: linear-gradient(to top right,  rgba(85, 82, 81, 0.823),
+            rgba(69, 67, 66, 0.9)),
+            url(./img/cast-iron-dumbbell-weights.jpg) center/ cover;
+            margin-bottom: 3rem;
+            text-align: center;
+            .about-SEc{
+                width: 40%;
+                text-align: justify;
+            }
+          h2{
+            color: var(--border-Color);
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+          }
+          p{
+            font-size: 1.5rem;
+            color: var(--text-sec);
+            margin-bottom: 1.2rem;
+            line-height: 1.4;
+          }
+          .btn2{
+            padding: 1.1rem 1.3rem;
+            background-color: var(--text-color);
+            font-size: 1.5rem;
+            color: var(--text-sec);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.7rem;
+             transition: all 0.2s ease-in;
+          }
+          .btn2:hover{
+            transform: translateY(-2px);
+          }
+}
+/* Our Class */
+#classes{
+    padding-top: 10rem !important;
+}
+.our-class{
+   text-align: center;
+   margin-top: 1rem;
+}
+.border{
+    max-width: 1050px;
+    display: flex;
+    gap: 3rem;
+}
+.clas-con1{
+    width: 40%;
+    height: 400px;
+    .btn5{
+        width: 97%;
+        border: none;
+         padding: 2rem 2.1rem;
+         margin: 0.4rem 0.4rem;
+         background: var(--text-color);
+         color: var(--text-sec);
+         font-size: 1.4rem;
+         font-weight: 600;
+         letter-spacing: 0.3;
+         border-radius: 4px;
+         cursor: pointer;
+        transition: all 0.4s ease-in;
+    }
+    .btn5:hover{
+   color: var(--text-color);
+   border:1px solid var(--text-color);
+   background: none;
+   }
+}
+.clas-con2{
+    width: 60%;
+    padding: 1rem;
+    aspect-ratio: 1;
+}
+.clascont {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 2.1rem;
+    margin: 3rem 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px 3px;
+     transition: all 0.4s ease-in;
+     cursor: pointer;
+     span i{
+        font-size: 1.9rem;
+        color: var(--text-color);
+        transform: rotate(-20deg);
+        margin-right: 1rem;
+     }
+     h2{
+         color: #000000cb;
+         font-size: 1.8rem;
+        }
+    }
+    .clascont:hover{
+    transform: translateY(-3px);
+}
+.clascont.active{
+    h2{
+        color: var(--text-color); }
+}
+.clas-conts{
+    display: none;
+}
+.clas-conts.active{
+    width: 550px;
+    display:flex;
+    img{
+        width: 100%; 
+        padding: 0.7rem 0; 
+        border-radius: 9px;      
+    }
+    h2{
+        font-size: 1.8rem;
+        color: #000000cb;
+        margin-bottom: 0.5rem;
+    }
+   .btn4{
+    padding: 0.9rem 1.5rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--text-color);
+    color: var(--text-sec);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+} 
+ .btn4:hover{
+   color: var(--text-color);
+   border:1px solid var(--text-color);
+   background: none;
+   }
+}
+/* Schedule section */
+#schedule{
+    padding-top: 8rem !important;
+}
+.schedSec{
+    min-height: 80vh;
+    background: linear-gradient(to top right, rgba(85, 82, 81, 0.823),
+            rgba(69, 67, 66, 0.9)),
+            url(./img/kettlebell-fitness-still-life.jpg) center / cover;    
+    .ourClass{
+    text-align: center;
+    padding-top: 8rem;
+    h2{ color: var(--text-sec);}
+    p{color: var(--text-sec);} 
+    }
+}
+.scheduleSec.active{
+   color: var(--text-color);
+}
+.DayCont{
+    text-align: center;
+    span{
+        cursor: pointer;
+        color: var(--text-sec);
+        font-size: 1.6rem;
+        font-weight: 600;
+       padding: 0 0.6rem;
+    }
+}
+.tableCont{
+    display: none;
+    padding-left: 10rem;
+}
+.tableCont.active{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+table{
+    border: 2px solid var(--border-Color);
+       border-collapse:collapse;
+       tr, td{
+        padding: 2.5rem 5rem;
+        border: 1.7px solid var(--border-Color);
+       }
+       td{
+        font-size: 1.4rem;
+        color: var(--text-sec);
+       }
+    }
+/* Expert trainer */
+.trainer{
+text-align: center;
+}
+.trainerSec{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.trainer1{
+    transition: all 0.4s ease-in;
+    align-items: center;
+    margin: 0 1.2rem;
+    width: 100%;
+    height: 400px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 6px 4px;
+    img{
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 0.8rem;
+    }
+    .p1{
+        color: var(--text-color);
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+    h2{
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+}
+.trainer1:hover{
+    transform: translateY(-3px);
+}
+span i{
+    font-size: 1.6rem;
+    padding: 0.9rem 1.2rem;
+}
+/* contact  section*/
+#contact{
+    padding-top: 10rem !important;
+}
+.contact-sec{
+    padding-top: 7rem;
+    min-height:30rem;
+}
+.contacts{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.contact-content{
+    margin: 0 auto;
+    width: 80%;
+}
+.contact{
+    width: 450px;
+    height: 500px;
+    padding:2rem;
+    background-color: var(--text-sec);
+    border-radius: 4px;
+    input{
+        width: 90%;
+        padding: 1rem 1.2rem;
+        margin: 1rem 0;
+        font-size: 1.6rem;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--border-Color);
+    }
+    textarea{
+        margin: 1rem 0;
+        background-color: var(--border-Color);
+        width: 90%;
+        padding: 1rem 1.2rem;
+        font-size: 1.6rem;
+        border: none;
+        border-radius: 4px;
+    }
+    .btn3{
+        background-color: var(--text-color);
+        color: var(--text-sec);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 1rem 1.1rem;
+        border: none;
+        border-radius: 4px;
+        margin-top: 0.6rem;
+        transition: all 0.3s ease-in;
+    }
+    .btn3:hover{
+    color: var(--text-color);
+   border:1px solid var(--text-color);
+   background: none;
+    }
+}
+/* Footer Section */
+footer{
+    margin-top: 7rem;
+    min-height: 60vh;
+    background-color: var(--background-colors);   
+    .div1{ 
+         p{
+            line-height: 1.9;
+            font-size: 1.6rem;
+            color: var(--text-sec);}
+    }
+    .div2{
+         text-align: center;
+        ul li
+        { margin-bottom: 1.4rem;}
+        a{ font-size: 1.7rem; }
+    }
+    .div3{ 
+        p{
+            line-height: 1.9;
+            font-size: 1.6rem;
+            color: var(--text-sec);}
+    }
+    .div4{
+        .span1{
+            cursor: pointer;
+            border-radius: 25%;
+            background-color: #ff0000be;
+            margin: 1.4rem 0.9rem 0 0.9rem;
+            padding: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .fab{
+            padding: 0 !important;
+            font-size: 2rem;
+            color: var(--border-Color);
+        }
+        .span1:hover{ 
+             transform: translateX(-3px); 
+            }
+    } 
+     .div5{ 
+        text-align: center;
+        .build{
+            font-size: 1.6rem;
+        }
+         p{
+            line-height: 1.9;
+            font-size: 1.6rem;
+            color: var(--text-sec);}
+    }
+}
+@media(width <= 1100px){
+    .header-sec{ padding: 2.3rem 6rem;}
+    .about-content .icons span .fa-solid{ padding-left:0.5rem; }
+    .border{
+        display: flex;
+        flex-direction: column;
+    }
+        .clas-con1{
+            width: 80%;
+        }    
+        .clas-con2{margin-top: 12rem;}
+        .clas-conts.active{ width:650px;}
+        .tableCont{
+            padding-left: 6rem;
+        }   
+        .contact-content{
+    margin: 0;}
+}
+@media(width <= 1000px){
+.grid-two--cols{
+        grid-template-columns: 1fr;
+    }
+    .contact-content{ margin: 0 auto;
+    gap: 2rem;}
+}
+@media(width <= 900px){
+    .main-con  h1{ font-size: 4rem; }
+    .btn1{font-size: 1.3rem; padding: 1.2rem 1.4rem;}
+    .about-sec{
+        width: 70%;
+    }
+    .about-content   .PART1 .icons{
+        width: 10%;
+    }
+    .about-hero .about-SEc{ width: 70%; }
+    .about-hero .btn2{ font-size: 1.1rem;}
+    .grid-two--cols, .grid-three--cols, .grid-four--cols {
+        grid-template-columns: 1fr;
+    }
+    .grid{
+        gap: 1.5rem;
+    }; 
+    .border{padding:2rem 1rem;}
+    .scheduleCont{
+      padding: 3rem 2rem;
+    }
+    .TableSec .tableCont{
+       padding-left: 0;
+     }  
+     .tableCont{
+            padding-left: 3rem;
+        }
+    .trainerSec{
+        flex-direction: column;
+        width: 430px;
+        aspect-ratio: 1;
+        .trainer1{ margin: 1.4rem;
+            height: 460px;
+         }
+        }
+        .contact-sec .contact-content iframe{
+            width: 400px;
+        } .contact-sec .contact-content .contact{
+            width: 400px;
+        }
+        footer .footer-sec .div2{
+         text-align: left;
+    }
+}
+@media(width <= 768px){
+    .header-sec{ padding: 2.3rem 5rem;}
+    .main-con h3{font-size: 1.4rem;} h1{ font-size: 3rem !important; }
+          .about-sec{
+        width: 80%;
+    }
+    .about-content   .PART1 .icons{
+        width: 20%;
+    }
+    .about-hero .about-SEc{
+                width: 80%; }
+    .schedSec .scheduleCont{  padding: 3rem 0.5rem !important;}           
+     .content .ourClass{
+        padding:2rem 1.2rem 2rem 0;
+    }
+    .clas-conts.active{ width:450px;}
+       .tableCont{
+            padding-left: 0;
+            table tr, td{
+                padding: 1.3rem 3rem;
+            }
+        }
+}
+@media(width <= 550px){
+    .header-sec{ padding: 2.3rem 2.5rem;}
+        .main-con h3{font-size: 1.3rem;} h1{ font-size: 2.9rem !important; }
+    .btn1{font-size: 1.1rem; padding: 0.9rem 1rem;}
+     .about-content   .PART1 .icons{ width: 30%;}
+     .about-sec{
+        width: 100%;
+    }
+    .clas-con1{
+            width: 100%;
+        }  
+    .scheduleCont{ padding: 3rem 2rem 3rem 0;}
+    .trainerSec{
+        width: 330px;
+}
+    .clas-conts.active{ width:400px;}
+ .tableCont{
+            table tr, td{
+                padding: 0.9rem 1.9rem;
+            }
+        }
+         .contact-sec 
+        {.contact-content .contact-map  iframe{
+            width: 350px;
+        } .contact{
+             width:350px !important; }}
+}
+@media(width <= 470px){
+        .main-con h3{font-size: 1.2rem;} h1{ font-size: 2.7rem !important; }
+    .content{ padding: 4rem 3rem !important;}
+    .about-content   .PART1 .icons{ width: 40%; span .fa-solid{padding-left: 1.5rem;}}
+    .about-hero .about-SEc{
+                width: 90%; }
+                .content .border .clas-con2{ margin-top: 15rem; }
+    .clas-conts.active{ width:300px;}
+    .TableSec{ padding: 3rem 1rem !important; .tableCont table td{font-size: 1.2rem; }}
+ .tableCont{
+            table tr, td{
+                padding: 0.4rem 1.4rem;
+            } }
+        .contact-sec
+        { padding:7rem 1rem ;
+        }    
+       .contact-sec .contact-content{ iframe{width: 290px !important; } .contact{ width: 290px !important;} }
+}
+@media(width <= 400px){
+        .about-content   .PART1 .icons{ width: 60%; height: 60px; span .fa-solid{ font-size: 1.8rem;}}
+        .content{ padding: 4rem 1rem !important;}
+        .content .container{ padding: 3rem 1rem !important;}
+.schedSec .scheduleCont .DayCont span{ font-size: 1.3rem;}
+.TableSec{ padding: 3rem 1rem !important; .tableCont table td{font-size: 1.2rem; } }
+.trainerSec{
+        width: 300px;
+    }
+}
